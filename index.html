@@ -1,51 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<i></i><meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="kipalog.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<title>KIPALOG</title>
-</head>
-<body>
-	<header>
-		<nav class="clearfix">
-			<a id="left" href="#">KIPALOG</a>
-			<a id="right" href="#"> 
-				<i class="fas fa-user"></i>
-				Đăng ký
-			</a>
-		</nav>
-	</header>
-	<content>
-		<div id="intro">
-			<h1>KIPALOG</h1>
-			<p>Chia sẻ và học hỏi kiến thức một cách dễ dàng hơn.</p>
-		</div>
-		<div id="form">
-			<form>
-				<input id="email" type="text" placeholder="Email">
-				<input id="password" type="text" placeholder="Password">
-				<button id="signin">ĐĂNG NHẬP</button>
-			</form>
-			<a href="">Quên password ?</a>
-		</div>
-		<div id="border">
-			<div id="in_border">
-				<div id="border_left"></div>
-				<div id="border_middle">
-					<div id="check">
-					</div>
-				</div>
-				<div id="border_right"></div>
-			</div>
-		</div>
-	</content>
-	<footer>
-		<div id="link">
-			<button id="facebook"><img src="fbicon.png">FACEBOOK</button>
-			<button id="twitter"><img src="tticon.png">TWITTER</button>
-			<button id="github"><img src="ghicon.png">GITHUB</button>
-		</div>
-	</footer>
-</body>
+body {
+	background-color: #f7f5f3;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+.clearfix {
+	display: block;
+	width: 100%;
+	clear: both;
+	content: ' ';
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+button {
+	border-style: none;
+	outline: none;
+	cursor: pointer;
+}
+nav {
+	height: 60px;
+    line-height: 60px;	
+    position: relative;
+    background: #2c4762;
+}
+nav a#left {
+	display: inline-block;
+    height: 100%;
+    line-height: 60px;
+    color: #f4f6f7;
+    font-size: 19px;
+    margin-left: 8%;
+    float: left;
+}
+nav a#right {
+	display: inline-block;
+    width: 120px;
+    height: 37px;
+    border-radius: 4px;
+    line-height: 35px;
+	border: 1px solid #6c7f91;
+	color: #fafafa;
+	text-align: center;
+	font-size: 15px;
+	float: right;
+	position: absolute;
+	top: calc(50% - 18px);
+	right: 8%;
+}
+nav a#right i {
+	color: #c6cdd4;
+	font-size: 12px;
+	margin-right: 8%;
+}
+content div#intro {
+	width: 100%;
+    height: 200px;
+    text-align: center;
+    padding-top: 7%;
+}
+content div#intro h1 {
+    color: #00b5ad;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+content div#intro p {
+	color: rgba(0,0,0,0.6);
+	font-weight: 400;
+	margin-top: 1.5%;
+	font-size: 1em;
+	word-spacing: .9px;
+}
+div#form {
+	padding-top: 2.2%;
+	height: 230px;
+	position: relative;
+}
+div#form input, button, a {
+	display: block;
+	position: absolute;
+}
+input {
+	width: 24%;
+	height: 40px;
+	border: 1px solid rgba(0,0,0,0.15);
+	padding: 0.65em 1.2em;
+	outline: none;	
+	background-color: rgba(255,255,255,0.7);
+}
+input:focus {
+	border: 1.4px solid rgba(0,0,0,0.15);
+	border-left: 0.5em solid rgba(0,0,0,0.15);
+	padding-left: 0.8em;
+	transition: all 0.2s ease-in;
+}
+input::-webkit-input-placeholder {
+	color: rgba(170,170,170,1);
+	font-size: 1rem;
+}
+input::-moz-placeholder {
+	color: rgba(170,170,170,1);
+	font-size: 1rem;
+}
+input#email {
+	left: 38%;
+}
+input#password {
+	top: 38%;
+	left: 38%;
+}
+button#signin {
+	width: 24%;
+	height: 38px;
+	background-color: #5BBD72;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 0.9em;
+	border: .8px solid #54ae69;
+	top: 64.8%;
+	left: 38%;
+	border-radius: 3px;
+}
+button#signin:hover {
+	background-color: #5dc575;
+}
+div#form a {
+	display: inline-block;
+	color: #00b5ad;
+	font-size: 1rem;
+	top: 88%;
+	left: 38%;
+}
+div#border {
+	width: 100%;
+}
+div#border {
+	height: 38px;
+	margin-top: 0em;
+}
+div#in_border {
+	position: relative;
+	height: 100%;
+	width: 24%;
+	transform: translate(158.33%,0);
+}
+div#in_border div:nth-child(odd) {
+	position: absolute;
+	height: 0;
+	width: 44%;
+	border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+div#in_border div#border_left {
+	top: 0.8em;
+}
+div#in_border div#border_right {
+	top: 0.8em;
+	left: 56%;
+}
+div#in_border div#border_middle {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: 2px solid rgba(228,226,224,1);
+	position: absolute;
+	top: -3px;
+	left: calc(50% - 16px);
+}
+div#border_middle div#check {
+	height: 7px;
+	width: 7px;
+	background-color: transparent;
+	border-left: 1px solid rgba(154,153,152,1);
+	border-bottom: 1px solid rgba(154,153,152,1);
+	border-top: none;
+	transform: rotate(-45deg) translate(2px,13px);
+}
+footer {
+	width: 100%;
+}
+div#link {
+	width: 36%;
+	height: 140px;
+	transform: translate(87.48%,0);
+	padding: 1.6% 1.7%;
+}
+div#link button {
+	width: 32%;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 1rem;
+	position: relative;
+}
+div#link button#facebook {
+	background: #4a6ea9;
+	border: 2px solid #4a6ea9;
+	padding-left: 1.7em;
+	margin-left: 2%;
+}
+div#link button > img {
+	position: absolute;
+}
+div#link button#facebook img {
+	left: 1em;
+    top: 0.78em;
+}
+div#link button#twitter {
+	background: #2ba8e0;
+	transform: translate(106%,-100%);
+	padding-left: 1.5em;
+	margin-left: 1%;
+}
+div#link button#twitter img {
+	left: 1.3em;
+    top: 0.54em;
+}
+div#link button#github {
+	background-color: #5C6166;
+	transform: translate(209%,-200%);
+	padding-left: 1.5em;
+	margin-left: 1%;
+}
+div#link button#github img {
+	left: 1.8em;
+    top: 0.73em;
+}
