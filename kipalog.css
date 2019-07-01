@@ -92,7 +92,7 @@ div#form input, button, a {
     position: absolute;
 }
 input {
-    width: 28%;
+    width: 26%;
     height: 40px;
     border: 1px solid rgba(0,0,0,0.15);
     padding: 0.65em 1.2em;
@@ -114,14 +114,14 @@ input::-moz-placeholder {
     font-size: 1rem;
 }
 input#email {
-    left: 36%;
+    left: 37%;
 }
 input#password {
     top: 37%;
-    left: 36%;
+    left: 37%;
 }
 button#signin {
-    width: 28%;
+    width: 26%;
     height: 38px;
     background-color: #5BBD72;
     color: #FFFFFF;
@@ -129,7 +129,7 @@ button#signin {
     font-size: 0.9em;
     border: .8px solid #54ae69;
     top: 63%;
-    left: 36%;
+    left: 37%;
     border-radius: 3px;
 }
 button#signin:hover {
@@ -140,7 +140,7 @@ div#form a {
     color: #00b5ad;
     font-size: 1rem;
     top: 86%;
-    left: 36%;
+    left: 37%;
 }
 div#border {
     width: 100%;
@@ -152,8 +152,8 @@ div#border {
 div#in_border {
     position: relative;
     height: 100%;
-    width: 28%;
-    transform: translate(128.57%,0);
+    width: 26%;
+    transform: translate(142.3%,0);
 }
 div#in_border div:nth-child(odd) {
     position: absolute;
